@@ -8,6 +8,10 @@ The prototype builds weak labels from QASPER document structure, extracts frozen
 - `meso`
 - `micro`
 
+Scientific papers do not communicate at a single level of abstraction. Some spans summarize the whole contribution at a high level, some organize the discourse inside a section, and some describe concrete implementation or experimental detail. This project studies that variation as Semantic Level of Detail (SLoD): `macro` for global summary language, `meso` for intermediate organizing and section-level discourse, and `micro` for low-level technical content. The broader motivation is to understand whether these discourse levels are recoverable from frozen language-model representations, or whether apparent success mostly reflects surface structure such as section identity, text length, or common lexical cues.
+
+The repository therefore serves two linked purposes. First, it provides a working weak-supervision pipeline that turns structured scientific papers into a labeled probing dataset using document structure as a proxy for abstraction level. Second, it evaluates whether simple linear probes on frozen embeddings can recover that signal under controlled conditions. In practical terms, the project is asking whether models such as SciBERT and MiniLM encode a usable notion of discourse abstraction, and whether the hardest middle band, `meso`, behaves like a real semantic layer or mostly reflects noisy boundaries between overview and detail.
+
 ## Setup
 
 ```bash
