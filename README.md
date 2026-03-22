@@ -18,7 +18,7 @@ The repository therefore serves two linked purposes. First, it provides a workin
 pip install -r requirements.txt
 ```
 
-## Owner-Style Command
+## Quick Start
 
 Run the prototype exactly as:
 
@@ -76,6 +76,18 @@ python src/dataset.py --export-prototype-spans --input data/processed/refined_qa
 python src/dataset.py --export-prototype-spans --input data/processed/refined_qasper_slod_length_controlled.csv --output data/spans/refined_qasper_slod_controlled.csv
 ```
 
+## Dataset Download
+
+This prototype uses the QASPER scientific-paper dataset.
+
+If the raw QASPER files are not already present, they are downloaded automatically when you run:
+
+```bash
+python src/dataset.py --extract-qasper --config configs/prototype_qasper_weak_labels.yaml
+```
+
+The raw download is stored under `data/raw/qasper/` during extraction, and the processed prototype spans are then written to `data/spans/` and `data/processed/`.
+
 ## Cached Embeddings
 
 The prototype uses cached frozen embeddings. The expected owner-facing `embeddings/` layout is documented in:
@@ -91,7 +103,7 @@ The active cache directories used by the code are:
 
 ## Results
 
-Saved metrics and confusion matrices are under:
+The repository includes saved metrics, predictions, and confusion matrices under:
 
 - `results/prototype/in_domain/`
 - `results/prototype/controlled/`
@@ -107,6 +119,13 @@ Condition summaries:
 
 - `results/prototype/in_domain/summary.json`
 - `results/prototype/controlled/summary.json`
+
+Included deliverable artifacts:
+
+- code under `src/`
+- data samples under `data/spans/`
+- cached embeddings under `data/cache_refined_qasper_slod_*/`
+- cached results under `results/prototype/`
 
 ## Project Structure
 
