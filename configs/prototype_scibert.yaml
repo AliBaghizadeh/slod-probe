@@ -1,0 +1,24 @@
+paths:
+  in_domain_spans: data/processed/refined_qasper_slod.csv
+  controlled_spans: data/processed/refined_qasper_slod_length_controlled.csv
+  prototype_spans_dir: data/spans
+  prototype_results_base: results/prototype
+
+split:
+  test_size: 0.2
+  random_state: 42
+
+models:
+  scibert:
+    model_name: allenai/scibert_scivocab_uncased
+    cache_in_domain: data/cache_refined_qasper_slod_scibert
+    cache_controlled: data/cache_refined_qasper_slod_scibert_length_controlled
+    batch_size: 16
+  minilm:
+    model_name: sentence-transformers/all-MiniLM-L6-v2
+    cache_in_domain: data/cache_refined_qasper_slod_minilm
+    cache_controlled: data/cache_refined_qasper_slod_minilm_length_controlled
+    batch_size: 32
+
+tfidf:
+  max_features: 5000

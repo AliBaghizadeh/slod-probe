@@ -1,0 +1,18 @@
+{
+  "accuracy": 0.7527777777777778,
+  "class_macro_precision": 0.8088235294117647,
+  "class_macro_recall": 0.7534246575342466,
+  "class_macro_f1": 0.7801418439716312,
+  "class_macro_support": 146,
+  "class_meso_precision": 0.0,
+  "class_meso_recall": 0.0,
+  "class_meso_f1": 0.0,
+  "class_meso_support": 37,
+  "class_micro_precision": 0.71875,
+  "class_micro_recall": 0.9096045197740112,
+  "class_micro_f1": 0.8029925187032418,
+  "class_micro_support": 177,
+  "macro_precision": 0.5091911764705882,
+  "macro_recall": 0.5543430591027526,
+  "macro_f1": 0.5277114542249577
+}

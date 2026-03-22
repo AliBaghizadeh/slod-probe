@@ -1,0 +1,26 @@
+paths:
+  processed_spans: data/spans/qasper_prototype_mode.csv
+
+qasper_extraction:
+  split: train
+  max_papers: 100
+  min_tokens: 1
+  max_tokens: 150
+  cache_dir: data/raw/qasper
+  domain: scientific
+  label_rules:
+    mode: prototype
+    include_title: true
+    macro_intro_paragraph_limit: 2
+    prototype_lead_sentence_only: true
+    prototype_micro_detail_section_keywords:
+      - methods
+      - method
+      - methodology
+      - experiments
+      - experiment
+      - results
+      - evaluation
+
+dataset_validation:
+  diagnostics_output: data/spans/qasper_prototype_mode_diagnostics.json

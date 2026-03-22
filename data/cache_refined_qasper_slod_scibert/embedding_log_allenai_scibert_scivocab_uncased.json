@@ -1,0 +1,15 @@
+﻿{
+  "timestamp": "2026-03-17T11:38:45.599957",
+  "model": "allenai/scibert_scivocab_uncased",
+  "n_samples": 1741,
+  "embedding_dim": 768,
+  "batch_size": 16,
+  "text_column": "text",
+  "metadata_columns": [
+    "span_id",
+    "weak_label",
+    "paper_id"
+  ],
+  "cache_embeddings": "data\\cache_refined_qasper_slod_scibert\\embeddings_allenai_scibert_scivocab_uncased.npy",
+  "cache_metadata": "data\\cache_refined_qasper_slod_scibert\\metadata_allenai_scibert_scivocab_uncased.csv"
+}
